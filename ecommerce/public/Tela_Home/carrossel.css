@@ -1,0 +1,79 @@
+/* Carrossel de promoçoes */
+
+.carousel {
+    width: 940px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 80px; 
+    margin: 0 auto; 
+}
+
+.carousel:hover .btnAnterior,
+.carousel:hover .btnProximo {
+    display: flex;
+}
+
+.slides {
+    display: flex; /* Utiliza flexbox para os slides */
+    overflow: hidden;
+    position: relative; /* Necessário para os botões absolutos */
+}
+
+.slide {
+    flex: 0 0 auto;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+.navegacao {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: none;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.dot.ativado {
+    background: #ffffff;
+}
+
+.btnAnterior,
+.btnProximo {
+    width: 30px; 
+    height: 60px; 
+    display: none;
+    top: 120px; 
+    background: none;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+}
+
+.btnAnterior {
+    left: 0;
+    background-image: url('./Imagens/anterior.png');
+    background-size: cover;
+}
+
+.btnProximo {
+    right: 0;
+    background-image: url('./Imagens/proximo.png');
+    background-size: cover;
+}
+
